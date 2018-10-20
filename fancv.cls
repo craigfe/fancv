@@ -25,6 +25,7 @@
                    }
 
 \DeclareStringOption[]{colour}
+\DeclareStringOption[]{website}
 \DeclareStringOption[]{phone}
 \DeclareStringOption[]{email}
 \DeclareStringOption[]{github}
@@ -65,9 +66,10 @@
 	\begin{minipage}{.35\linewidth}
 		\begin{flushright}                                      
 			\begin{tabular}{r l}
-				\textsc{\textcolor[HTML]{999999}{github:}} & \fancv@github \\
+				\textsc{\textcolor[HTML]{999999}{website:}} & \fancv@website \\
 				\textsc{\textcolor[HTML]{999999}{email:}} & \fancv@email \\
-				\textsc{\textcolor[HTML]{999999}{phone:}} & \fancv@phone \\
+				\textsc{\textcolor[HTML]{999999}{github:}} & \fancv@github \\
+%				\textsc{\textcolor[HTML]{999999}{phone:}} & \fancv@phone \\
 			\end{tabular}
 		\end{flushright} 
 	\end{minipage}
