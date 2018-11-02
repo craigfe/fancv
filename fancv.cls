@@ -31,6 +31,7 @@
 \DeclareStringOption[]{github}
 \DeclareStringOption[]{name}
 \DeclareStringOption[]{position}
+\DeclareStringOption[]{headline}
 
 \ProcessKeyvalOptions{fancv}
 
@@ -42,12 +43,12 @@
 
 % Hyperlink colour
 \definecolor{linkcolour}{rgb}{0.6,0.1,0.2}
-\hypersetup{ colorlinks = true 
+\hypersetup{ colorlinks = true
            , allcolors  = linkcolour
            }
 
 % Disable page numbering
-\pagenumbering{gobble} 
+\pagenumbering{gobble}
 
 % Redefine the title format
 \def\@maketitle{%
@@ -58,25 +59,28 @@
 	\begin{minipage}{.65\linewidth}
 		\begin{flushleft}
 			{\huge\textcolor[HTML]{\fancv@colour}{\textsc{\fancv@name}}}
-		\end{flushleft} 
+		\end{flushleft}
 		\vskip 0.8em%
 		\textit{\large\fancv@position}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{.35\linewidth}
-		\begin{flushright}                                      
+		\begin{flushright}
 			\begin{tabular}{r l}
 				\textsc{\textcolor[HTML]{999999}{website:}} & \fancv@website \\
 				\textsc{\textcolor[HTML]{999999}{email:}} & \fancv@email \\
 				\textsc{\textcolor[HTML]{999999}{github:}} & \fancv@github \\
 %				\textsc{\textcolor[HTML]{999999}{phone:}} & \fancv@phone \\
 			\end{tabular}
-		\end{flushright} 
+		\end{flushright}
 	\end{minipage}
 	\egroup
   \vskip 0.2em%
   \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}%
-  \vskip 1.5em%
+  \vskip 1.2em%
+  \begin{center}
+  \textit{\large\fancv@headline}%
+  \end{center}
 }
 
 % Redefine the section format
@@ -94,7 +98,7 @@
 
 
 \def\addmargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
-\let\endaddmargin=\endlist 
+\let\endaddmargin=\endlist
 
 \newenvironment{placement}[3]
 {
